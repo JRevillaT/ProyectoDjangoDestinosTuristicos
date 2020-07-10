@@ -1,8 +1,22 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from travello.models import Destination
 
 # Create your views here.
+
+def pag_modificar(request):
+    dests= Destination.objects.all()
+    return render(request,'pag_modificar.html',{'dests':dests})
+
+def pag_eliminar(request):
+    return render(request,'pag_eliminar.html',{})
+
+def pag_anadir(request):
+    return render(request,'pag_anadir.html',{})
+
+def change(request):
+    return render(request,'change.html',{})
 
 def logout(request):
     auth.logout(request)

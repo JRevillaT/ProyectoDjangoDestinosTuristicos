@@ -3,4 +3,5 @@ from . import views,models
 
 urlpatterns=[
     path('',views.index,name='index'),
+    path('vista',views.vista,name='vista'),
     ]

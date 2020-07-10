@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de destinos</title>
+    <style type="text/css">
+    body{
+        background-image:"" ;
+    }
+    </style>
+</head>
+<body >
+    {% for dest in dests %}
+    <tr class="row1"><td class="action-checkbox"></td><th class="field-__str__"><a href="/admin/travello/destination/{{ dest.id }}/change/">{{ dest.name }}</a></th></tr>
+    <div>Descripcion: {{ dest.desc }}</div>
+    <div>Precio: {{ dest.price }}</div>
+    <div>Esta en oferta??: {{ dest.offer }}</div>
+    <br>
+    {% endfor %}
+</body>
+</html>
